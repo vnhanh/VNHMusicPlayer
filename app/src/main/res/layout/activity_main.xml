@@ -21,24 +21,13 @@
         app:tabGravity="fill"
         app:tabMode="fixed"/>
 
-    <Button
-        android:id="@+id/btn_showData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Data"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout_songs"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin"/>
-
-    <TextView
-        android:id="@+id/txt_result"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_songs"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btn_showData"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/margin"
-        android:textColor="@android:color/black"/>
-
+        app:layout_constraintTop_toBottomOf="@+id/tablayout_songs"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    
 </android.support.constraint.ConstraintLayout>

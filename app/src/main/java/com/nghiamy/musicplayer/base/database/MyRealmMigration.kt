@@ -1,4 +1,4 @@
-package com.nghiamy.musicplayer
+package com.nghiamy.musicplayer.base.database
 
 import io.realm.DynamicRealm
 import io.realm.RealmMigration
