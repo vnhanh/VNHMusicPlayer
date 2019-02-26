@@ -1,23 +1,24 @@
-package com.nghiamy.musicplayer.ui.all_songs
+package com.nghiamy.musicplayer.ui.folders
 
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import com.nghiamy.musicplayer.R
-import com.nghiamy.musicplayer.base.ui.BaseFragment
 
 
-class AllSongsFragment : BaseFragment() {
+class MusicFoldersFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return inflater.inflate(R.layout.fragment_all_songs, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_music_folders, container, false)
     }
+
 
 }

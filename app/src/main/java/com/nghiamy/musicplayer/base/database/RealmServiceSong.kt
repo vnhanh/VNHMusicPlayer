@@ -3,10 +3,7 @@ package com.nghiamy.musicplayer.base.database
 import com.nghiamy.musicplayer.base.model.Song
 import io.realm.Realm
 
-class RealmServiceSong(private val realm:Realm) {
-    fun closeRealm(){
-        realm.close()
-    }
+class RealmServiceSong(realm:Realm) : BaseRealmService(realm){
 
     fun addNewSong(newSong:Song) {
         realm.beginTransaction()

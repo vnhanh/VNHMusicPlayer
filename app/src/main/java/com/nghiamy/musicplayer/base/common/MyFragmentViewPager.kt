@@ -22,4 +22,8 @@ class MyFragmentViewPager(fragmentManager: FragmentManager) : FragmentPagerAdapt
         titles.add(title)
         fragments.add(fragment)
     }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return if(position < titles.size) titles.get(position) else null
+    }
 }
