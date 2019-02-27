@@ -3,8 +3,8 @@ package com.nghiamy.musicplayer.base.dagger.module
 import android.app.Application
 import com.nghiamy.musicplayer.base.MyApplication
 import com.nghiamy.musicplayer.base.dagger.scope.PerActivity
-import com.nghiamy.musicplayer.ui.main_screen.HomeActivity
-import com.nghiamy.musicplayer.ui.main_screen.HomeScreenModule
+import com.nghiamy.musicplayer.ui.home_screen.HomeActivity
+import com.nghiamy.musicplayer.ui.home_screen.HomeScreenModule
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

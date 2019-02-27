@@ -2,4 +2,6 @@
 <resources>
     <dimen name="height_tab_indicator">2dp</dimen>
     <dimen name="margin">8dp</dimen>
+    <dimen name="size_avatar_music">24dp</dimen>
+    <dimen name="marginx2">16dp</dimen>
 </resources>

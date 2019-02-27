@@ -1,4 +1,4 @@
-package com.nghiamy.musicplayer.ui.main_screen
+package com.nghiamy.musicplayer.ui.home_screen
 
 import com.nghiamy.musicplayer.base.common.SongManager
 import com.nghiamy.musicplayer.base.dagger.scope.PerActivity

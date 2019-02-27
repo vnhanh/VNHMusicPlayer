@@ -2,14 +2,14 @@ package com.nghiamy.musicplayer.base.common
 
 import android.content.Context
 import android.util.Log
+import com.nghiamy.musicplayer.base.common.Constant.Companion.SONG_PATH
+import com.nghiamy.musicplayer.base.common.Constant.Companion.SONG_TITLE
 import java.io.File
 
 class SongManager(val context: Context) {
     private val TAG = "LOG"
     private val songList = ArrayList<HashMap<String,String>>()
     private val MP3_PATTERN = ".mp3"
-    private val SONG_TITLE = "SONG_TITLE"
-    private val SONG_PATH = "SONG_PATH"
 
     private var ignoreDirs:MutableList<String> = mutableListOf(
         "^sdcard/Android$",
@@ -61,6 +61,7 @@ class SongManager(val context: Context) {
         }
     }
 
+    // need to save music list into database if didn't
     fun getPlaylist() : ArrayList<HashMap<String,String>> {
         scan()
         return songList

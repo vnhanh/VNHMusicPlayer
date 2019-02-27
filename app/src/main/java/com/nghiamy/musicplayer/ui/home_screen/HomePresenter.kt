@@ -1,4 +1,4 @@
-package com.nghiamy.musicplayer.ui.main_screen
+package com.nghiamy.musicplayer.ui.home_screen
 
 import android.util.Log
 import com.nghiamy.musicplayer.base.common.SongManager
@@ -8,11 +8,7 @@ class HomePresenter(val view:IHomeContract.View, val songManager : SongManager, 
     private val TAG = "LOG"
 
     override fun onCreate() {
-        Log.d(TAG, "scanned all music files: ${realmServiceHomePerformed.checkIfScanedAllMusic()}")
-        if(!realmServiceHomePerformed.checkIfScanedAllMusic()){
-            val musicList = songManager.getPlaylist()
-            Log.d(TAG, "Number music files scanned: ${musicList.size}")
-        }
+
     }
 
     override fun onDestroy() {

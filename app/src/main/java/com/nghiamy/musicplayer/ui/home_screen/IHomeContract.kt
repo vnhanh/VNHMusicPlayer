@@ -1,6 +1,4 @@
-package com.nghiamy.musicplayer.ui.main_screen
-
-import com.nghiamy.musicplayer.base.model.Song
+package com.nghiamy.musicplayer.ui.home_screen
 
 interface IHomeContract {
     interface View{
