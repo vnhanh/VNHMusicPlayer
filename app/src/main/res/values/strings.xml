@@ -9,4 +9,14 @@
     <string name="notice_home_permissions_not_alllowed">Needed permissions not allowed. Pleae grant them to allow the
         application run as espected
     </string>
+
+
+    <string name="menu_item_play_immediately">Phát ngay</string>
+    <string name="menu_item_add_queue">Thêm vào hàng đợi</string>
+    <string name="menu_item_add_playlist">Thêm vào danh sách phát</string>
+    <string name="menu_item_share">Chia sẻ</string>
+    <string name="menu_item_delete">Xoá</string>
+    <string name="menu_item_edit_song_metadata">Sửa thông tin bài hát</string>
+    <string name="progress_scanning_all_music_files">Đang quét file nhạc mp3...</string>
+
 </resources>

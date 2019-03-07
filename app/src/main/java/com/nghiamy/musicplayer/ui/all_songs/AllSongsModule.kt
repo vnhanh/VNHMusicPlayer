@@ -11,9 +11,10 @@ import javax.inject.Singleton
 @Module
 abstract class AllSongsModule {
     // Provides
+    @Module
     companion object {
+        @JvmStatic
         @Provides
-        @Singleton
         @PerFragment
         fun providePresenter(view:IAllSongsContract.View,
                              preferences: CustomizeSharedPreferences,

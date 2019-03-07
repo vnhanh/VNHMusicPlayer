@@ -1,13 +1,14 @@
 package com.nghiamy.musicplayer.ui.all_songs
 
+import com.nghiamy.musicplayer.base.model.Song
+import com.nghiamy.musicplayer.base.ui.IProgressView
+
 interface IAllSongsContract {
-    interface View {
-        fun onShowProgressing()
-        fun onHideProgressing()
-        fun onDisplayAllMusics(musicList:ArrayList<HashMap<String,String>>)
+    interface View : IProgressView{
+        fun onDisplayAllMusics(musicList:ArrayList<Song>)
     }
 
     interface Presenter {
-        fun onCreate()
+        fun onResume()
     }
 }

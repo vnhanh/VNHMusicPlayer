@@ -10,6 +10,7 @@ import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
+import android.view.Menu
 import com.nghiamy.musicplayer.R
 import com.nghiamy.musicplayer.base.common.MyFragmentViewPager
 import com.nghiamy.musicplayer.base.ui.BaseActivity
@@ -42,14 +43,16 @@ class HomeActivity : BaseActivity(), IHomeContract.View {
         if(ContextCompat.checkSelfPermission(this, PERMISSION_WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED){
             val release = VERSION.RELEASE
-            val version = release.split(".")[0]
-            Log.d(TAG, "Android version: ${version}")
+            val firstDotIndex = release.indexOf(".")
+//            val version = release.split(".")[0]
+            val version = release.substring(0,firstDotIndex)
+            Log.d(TAG, javaClass.name + " | Android version: ${version}")
 
             if(version.toInt() >= 6){
-                Log.d(TAG, "requesting permissions")
+                Log.d(TAG, "\t\trequesting permissions")
                 requestPermissionForApi23Above()
             }else{
-                Log.d(TAG, "noticing...")
+                Log.d(TAG, "\t\tnoticing...")
                 noticePermissionNotAllowed()
             }
         }else{
@@ -71,7 +74,7 @@ class HomeActivity : BaseActivity(), IHomeContract.View {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        Log.d(TAG, "onRequestPermissionsResult | requestCode: ${requestCode} | granted: ${grantResults[0] == PackageManager.PERMISSION_GRANTED}")
+        Log.d(TAG, javaClass.name + " | onRequestPermissionsResult | requestCode: ${requestCode} | granted: ${grantResults[0] == PackageManager.PERMISSION_GRANTED}")
         when(requestCode){
             REQUEST_CODE_WRITE_EXTERNAL_STORAGE -> {
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED){

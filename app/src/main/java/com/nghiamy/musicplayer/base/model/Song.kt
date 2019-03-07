@@ -8,10 +8,12 @@ import java.util.*
 open class Song : RealmObject(){
     @PrimaryKey
     var id:String=""
-    @Required
-    var name:String=""
-    var author:String=""
-    var genres:String=""
-    var playlist:String=""
-    var artist:String=""
+
+    var name:String?=null
+    var author:String?=null
+    var genres:String?=null
+    var playlist:String?=null
+    var artist:String?=null
+    var path:String?=null
+    var songByteArray:ByteArray?=null
 }

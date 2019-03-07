@@ -16,6 +16,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
+        <service android:name=".base.service.PlayMusicService"/>
+
         <activity android:name=".ui.splash.SplashActivity">
         </activity>
         <activity android:name=".ui.home_screen.HomeActivity">

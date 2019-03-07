@@ -4,14 +4,18 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.nghiamy.musicplayer.R
+import com.nghiamy.musicplayer.base.model.Song
 
 class AllSongAdapter() : RecyclerView.Adapter<AllSongViewHolder>() {
-     lateinit var list:ArrayList<HashMap<String,String>>
+
+     private var list:ArrayList<Song> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): AllSongViewHolder {
-        LayoutInflater.from(parent.context).inflate(R.layout.view_holder_all_song, parent, false).also {
-            return AllSongViewHolder(it)
-        }
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_all_songs, parent, false)
+
+        val vh = AllSongViewHolder(view)
+
+        return vh
     }
 
     override fun getItemCount(): Int {
@@ -20,5 +24,10 @@ class AllSongAdapter() : RecyclerView.Adapter<AllSongViewHolder>() {
 
     override fun onBindViewHolder(holder: AllSongViewHolder, position: Int) {
         holder.bind(list.get(position))
+    }
+
+    fun setListMusic(musicList: ArrayList<Song>) {
+        list = musicList
+        notifyDataSetChanged()
     }
 }
