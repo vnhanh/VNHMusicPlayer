@@ -18,5 +18,13 @@
     <string name="menu_item_delete">Xoá</string>
     <string name="menu_item_edit_song_metadata">Sửa thông tin bài hát</string>
     <string name="progress_scanning_all_music_files">Đang quét file nhạc mp3...</string>
+    <string name="dialog_title_edit_metadata_song">Chỉnh sửa thông tin bài hát</string>
+    <string name="dialog_label_song_name">Tên bài hát:</string>
+    <string name="dialog_label_song_artist">Ca sĩ:</string>
+    <string name="dialog_label_song_author">Tác giả:</string>
+    <string name="dialog_label_song_album">Album:</string>
+    <string name="dialog_label_song_genres">Dòng nhạc:</string>
+    <string name="button_title_confirm">Hoàn tất</string>
+    <string name="button_title_cancel">Huỷ</string>
 
 </resources>

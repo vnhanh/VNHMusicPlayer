@@ -1,12 +1,11 @@
 package com.nghiamy.musicplayer.ui.all_songs
 
-import com.nghiamy.musicplayer.base.common.SongManager
+import com.nghiamy.musicplayer.base.common.SongScanner
 import com.nghiamy.musicplayer.base.dagger.scope.PerFragment
 import com.nghiamy.musicplayer.base.sharedpreferences.CustomizeSharedPreferences
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 @Module
 abstract class AllSongsModule {
@@ -18,7 +17,7 @@ abstract class AllSongsModule {
         @PerFragment
         fun providePresenter(view:IAllSongsContract.View,
                              preferences: CustomizeSharedPreferences,
-                             songManager: SongManager) : IAllSongsContract.Presenter = AllSongsPresenter(view, preferences, songManager)
+                             songScanner: SongScanner) : IAllSongsContract.Presenter = AllSongsPresenter(view, preferences, songScanner)
     }
 
     // Binds

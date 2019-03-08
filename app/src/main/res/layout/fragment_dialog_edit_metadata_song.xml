@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin">
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="@string/dialog_title_edit_metadata_song"
+        style="@style/BlackText.NormalTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:text="@string/dialog_label_song_name"
+        style="@style/BlackText.NormalLabel.RightAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_marginTop="@dimen/marginx4"
+        tools:layout_width="100dp" />
+
+    <EditText
+        android:id="@+id/edt_song_name"
+        android:ems="10"
+        android:inputType="text"
+        style="@style/NormalEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        tools:layout_marginLeft="@dimen/margin"
+        tools:layout_marginRight="@dimen/margin" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:text="@string/dialog_label_song_artist"
+        style="@style/BlackText.NormalLabel.RightAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_song_name"
+        tools:layout_marginTop="@dimen/marginx3"
+        tools:layout_width="100dp" />
+
+    <EditText
+        android:id="@+id/edt_artist"
+        style="@style/NormalEditText"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:text="@string/dialog_label_song_author"
+        style="@style/BlackText.NormalLabel.RightAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_artist"
+        tools:layout_marginTop="@dimen/marginx3"
+        tools:layout_width="100dp" />
+
+    <EditText
+        android:id="@+id/edt_author"
+        android:ems="10"
+        android:inputType="text"
+        style="@style/NormalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        tools:layout_width="0dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:text="@string/dialog_label_song_album"
+        style="@style/BlackText.NormalLabel.RightAlign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_author"
+        tools:layout_marginTop="@dimen/marginx3"
+        tools:layout_width="100dp" />
+
+    <EditText
+        android:id="@+id/edt_album"
+        android:ems="10"
+        android:inputType="text"
+        style="@style/NormalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        tools:layout_width="0dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:text="@string/dialog_label_song_genres"
+        style="@style/BlackText.NormalLabel.RightAlign"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_album"
+        tools:layout_marginTop="@dimen/marginx3" />
+
+    <EditText
+        android:id="@+id/edt_genres"
+        style="@style/NormalEditText"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        tools:layout_width="0dp" />
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:background="@drawable/bg_corner_4dp_background_primary"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_normal_title"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="@string/button_title_confirm"
+        android:padding="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_genres"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        tools:layout_marginTop="@dimen/marginx4" />
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_normal_title"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="@string/button_title_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_confirm"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_confirm" />
+
+</android.support.constraint.ConstraintLayout>

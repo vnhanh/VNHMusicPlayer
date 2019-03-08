@@ -1,14 +1,13 @@
 package com.nghiamy.musicplayer.base.common
 
 import android.content.Context
-import android.graphics.BitmapFactory
 import android.media.MediaMetadataRetriever
 import android.util.Log
 import com.nghiamy.musicplayer.base.model.Song
 import java.io.File
 import java.lang.Exception
 
-class SongManager(val context: Context) {
+class SongScanner(val context: Context) {
     private val TAG = "LOG"
     private val songList = ArrayList<Song>()
     private val MP3_PATTERN = ".mp3"
@@ -65,7 +64,7 @@ class SongManager(val context: Context) {
                 try {
                     val metadataRetriver = MediaMetadataRetriever()
                     metadataRetriver.setDataSource(it.path)
-                    it.songByteArray = metadataRetriver.embeddedPicture
+                    it.picBytes = metadataRetriver.embeddedPicture
                     it.name = metadataRetriver.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
 
                     if(Util.isEmpty(it.name)){

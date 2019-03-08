@@ -11,6 +11,23 @@ class RealmServiceSong(realm:Realm) : BaseRealmService(realm){
         realm.commitTransaction()
     }
 
+    fun updateSong(song:Song, onSuccess: Realm.Transaction.OnSuccess, onError:Realm.Transaction.OnError){
+        val transaction = object: Realm.Transaction{
+            override fun execute(realm: Realm) {
+                realm.where(Song::class.java).equalTo(Song.KEY.ID.value, song.id).findFirst()?.also { _song ->
+                    _song.title = song.title
+                    _song.artist = song.artist
+                    _song.author = song.author
+                    _song.albumn = song.albumn
+                    _song.genres = song.genres
+                }
+            }
+
+        }
+
+        realm.executeTransactionAsync(transaction, onSuccess, onError)
+    }
+
     fun getAllSongs():ArrayList<Song>{
         val list = ArrayList<Song>()
         realm.beginTransaction()

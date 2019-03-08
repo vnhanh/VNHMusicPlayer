@@ -3,5 +3,13 @@
     <dimen name="height_tab_indicator">2dp</dimen>
     <dimen name="margin">8dp</dimen>
     <dimen name="size_avatar_music">64dp</dimen>
+
+    <!--MARGIN-->
     <dimen name="marginx2">16dp</dimen>
+    <dimen name="marginx3">24dp</dimen>
+    <dimen name="marginx4">32</dimen>
+
+    <!--TEXT SIZE-->
+    <dimen name="text_size_normal_label">14sp</dimen>
+    <dimen name="text_size_normal_title">16sp</dimen>
 </resources>

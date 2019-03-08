@@ -1,6 +1,6 @@
 package com.nghiamy.musicplayer.ui.home_screen
 
-import com.nghiamy.musicplayer.base.common.SongManager
+import com.nghiamy.musicplayer.base.common.SongScanner
 import com.nghiamy.musicplayer.base.dagger.scope.PerActivity
 import com.nghiamy.musicplayer.base.database.RealmServiceHomePerformed
 import dagger.Binds
@@ -22,7 +22,7 @@ abstract class HomeScreenModule {
         @JvmStatic
         @Provides
         @PerActivity
-        fun providePresenter(view:IHomeContract.View, songManager: SongManager,
-                             realmServiceHomePerformed: RealmServiceHomePerformed) : HomePresenter = HomePresenter(view, songManager, realmServiceHomePerformed)
+        fun providePresenter(view:IHomeContract.View, songScanner: SongScanner,
+                             realmServiceHomePerformed: RealmServiceHomePerformed) : HomePresenter = HomePresenter(view, songScanner, realmServiceHomePerformed)
     }
 }
