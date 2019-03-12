@@ -3,6 +3,8 @@ package com.nghiamy.musicplayer.base.usecase
 import android.content.Context
 import android.content.Intent
 import android.support.v4.media.MediaMetadataCompat
+import android.util.Log
+import com.nghiamy.musicplayer.base.common.Constant.Companion.TAG
 import com.nghiamy.musicplayer.base.model.Song
 import com.nghiamy.musicplayer.base.service.Key
 import com.nghiamy.musicplayer.base.service.PlayMusicService
@@ -14,9 +16,11 @@ object SongUtil {
         context.startService(intent)
     }
 
-    fun editBasicSongMetadata(song: Song?) {
+    fun editMetadataSong(song: Song?) : Boolean{
+        Log.d(TAG, javaClass.name + " | editMetadataSong: ${song?.title}")
+
         if(song == null)
-            return
+            return false
 
         val metaData = MediaMetadataCompat.Builder()
 
@@ -24,5 +28,7 @@ object SongUtil {
         metaData.putString(MediaMetadataCompat.METADATA_KEY_AUTHOR, song.author)
         metaData.putString(MediaMetadataCompat.METADATA_KEY_ARTIST, song.artist)
         metaData.putString(MediaMetadataCompat.METADATA_KEY_GENRE, song.genres)
+
+        return true
     }
 }

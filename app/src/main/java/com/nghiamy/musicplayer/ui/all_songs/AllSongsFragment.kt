@@ -19,12 +19,11 @@ import javax.inject.Inject
 
 class AllSongsFragment : BaseFragment(), IAllSongsContract.View {
     @Inject lateinit var presenter:IAllSongsContract.Presenter
-    private lateinit var adapter:AllSongAdapter
+    @Inject lateinit var adapter:AllSongAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        adapter = AllSongAdapter()
 //        val song1 = Song().apply {
 //            name = "Ben Thuong Hai"
 //            artist = "Nguyen Hung - Nhu Quynh"

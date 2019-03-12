@@ -4,16 +4,17 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.nghiamy.musicplayer.R
+import com.nghiamy.musicplayer.base.datasource.song.SongRepository
 import com.nghiamy.musicplayer.base.model.Song
 
-class AllSongAdapter() : RecyclerView.Adapter<AllSongViewHolder>() {
+class AllSongAdapter(val repository: SongRepository) : RecyclerView.Adapter<AllSongViewHolder>() {
 
      private var list:ArrayList<Song> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int): AllSongViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_all_songs, parent, false)
 
-        val vh = AllSongViewHolder(view)
+        val vh = AllSongViewHolder(view, repository)
 
         return vh
     }

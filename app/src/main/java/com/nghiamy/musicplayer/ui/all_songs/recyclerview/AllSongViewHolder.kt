@@ -16,11 +16,8 @@ import com.nghiamy.musicplayer.ui.all_songs.EditMetadataSongDialogFragment
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.view_holder_all_songs.view.*
-import org.reactivestreams.Subscriber
-import org.reactivestreams.Subscription
 
 class AllSongViewHolder(val view:View, val repository: SongRepository) : RecyclerView.ViewHolder(view), PopupMenu.OnMenuItemClickListener {
     var song:Song?=null
@@ -65,7 +62,7 @@ class AllSongViewHolder(val view:View, val repository: SongRepository) : Recycle
     }
 
     private fun editSongMetadata() {
-        SongUtil.editBasicSongMetadata(song)
+        SongUtil.editMetadataSong(song)
     }
 
     private fun playMusic() {
@@ -116,23 +113,22 @@ class AllSongViewHolder(val view:View, val repository: SongRepository) : Recycle
                 repository.updateSong(song)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(object : Subscriber<Boolean>{
+                    .subscribe(object: Observer<Boolean> {
                         override fun onComplete() {
 
                         }
 
-                        override fun onSubscribe(s: Subscription?) {
-                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                        override fun onSubscribe(d: Disposable) {
+                            Log.d(TAG, javaClass.name + " | updateSong: ${d}")
                         }
 
-                        override fun onNext(t: Boolean?) {
-                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                        override fun onNext(item: Boolean) {
+                            Log.d(TAG, javaClass.name + " | updateSong | onNext: ${item}")
                         }
 
-                        override fun onError(t: Throwable?) {
-                            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                        override fun onError(e: Throwable) {
+                            Log.d(TAG, javaClass.name + " | updateSong | onError: ${e}")
                         }
-
                     })
             }
         }

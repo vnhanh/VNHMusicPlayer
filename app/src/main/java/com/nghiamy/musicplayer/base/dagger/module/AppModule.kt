@@ -6,6 +6,7 @@ import com.nghiamy.musicplayer.base.common.ConstantSharedPreference.Companion.SH
 import com.nghiamy.musicplayer.base.common.SongScanner
 import com.nghiamy.musicplayer.base.database.RealmServiceHomePerformed
 import com.nghiamy.musicplayer.base.database.RealmServiceSong
+import com.nghiamy.musicplayer.base.datasource.song.SongRepository
 import com.nghiamy.musicplayer.base.sharedpreferences.CustomizeSharedPreferences
 import dagger.Module
 import dagger.Provides
@@ -30,12 +31,4 @@ class AppModule {
     @Provides
     @Singleton
     fun provideRealm():Realm = Realm.getDefaultInstance()
-
-    @Provides
-    @Singleton
-    fun provideRealmServiceSong(realm:Realm):RealmServiceSong = RealmServiceSong(realm)
-
-    @Provides
-    @Singleton
-    fun provideRealmServiceHomePerformed(realm:Realm):RealmServiceHomePerformed = RealmServiceHomePerformed(realm)
 }

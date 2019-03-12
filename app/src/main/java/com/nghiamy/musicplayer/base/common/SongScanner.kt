@@ -65,10 +65,10 @@ class SongScanner(val context: Context) {
                     val metadataRetriver = MediaMetadataRetriever()
                     metadataRetriver.setDataSource(it.path)
                     it.picBytes = metadataRetriver.embeddedPicture
-                    it.name = metadataRetriver.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
+                    it.title = metadataRetriver.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE)
 
-                    if(Util.isEmpty(it.name)){
-                        it.name = file.name.substring(0, file.name.length-4)
+                    if(Util.isEmpty(it.title)){
+                        it.title = file.name.substring(0, file.name.length-4)
                     }
 
                     it.artist = metadataRetriver.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST)
