@@ -46,9 +46,8 @@ class EditMetadataSongDialogFragment : DialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, javaClass.name + "| onCreateView()")
-        val view = LayoutInflater.from(context).inflate(R.layout.fragment_dialog_edit_metadata_song, container, false)
 
-        return view
+        return LayoutInflater.from(context).inflate(R.layout.fragment_dialog_edit_metadata_song, container, false)
     }
 
     override fun onStart() {

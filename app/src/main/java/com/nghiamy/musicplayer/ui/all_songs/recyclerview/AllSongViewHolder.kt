@@ -53,6 +53,7 @@ class AllSongViewHolder(val view:View, val repository: SongRepository) : Recycle
             if(prevDialogFrag!=null){
                 ft.remove(prevDialogFrag)
             }
+            ft.commit()
 
             val newDialogFrag = EditMetadataSongDialogFragment.getInstance(song)
             newDialogFrag.onActionListener = onConfirmMetadataEdittedListener
