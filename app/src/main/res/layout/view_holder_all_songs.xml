@@ -9,6 +9,7 @@
 
     <ImageView
         android:id="@+id/img_avatar_music"
+        android:contentDescription="@string/content_desc_avatar_music"
         android:layout_width="@dimen/size_avatar_music"
         android:layout_height="@dimen/size_avatar_music"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,7 @@
 
     <ImageView
         android:id="@+id/ic_context_menu"
+        android:contentDescription="@string/content_desc_context_menu"
         android:background="@drawable/ic_context_menu_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

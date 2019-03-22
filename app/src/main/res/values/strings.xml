@@ -26,5 +26,7 @@
     <string name="dialog_label_song_genres">Dòng nhạc:</string>
     <string name="button_title_confirm">Hoàn tất</string>
     <string name="button_title_cancel">Huỷ</string>
+    <string name="content_desc_avatar_music">An avatar song</string>
+    <string name="content_desc_context_menu">Context menu button</string>
 
 </resources>
