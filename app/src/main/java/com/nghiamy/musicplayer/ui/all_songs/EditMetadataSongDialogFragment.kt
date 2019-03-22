@@ -18,7 +18,7 @@ import java.lang.ref.WeakReference
 class EditMetadataSongDialogFragment : DialogFragment() {
     companion object {
         fun getTag():String{
-            return this.javaClass.name
+            return this::class.java.name
         }
 
         private var INSTANCE:EditMetadataSongDialogFragment?=null
